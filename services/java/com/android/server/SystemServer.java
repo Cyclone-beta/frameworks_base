@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2006 The Android Open Source Project
+ * Copyright (C) 2024 Cyclone-AOSP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -841,6 +842,10 @@ public final class SystemServer implements Dumpable {
                                 .BOOT_TIME_EVENT_ELAPSED_TIME__EVENT__SYSTEM_SERVER_INIT_START,
                         uptimeMillis);
             }
+
+            Slog.i("Cyclone-AOSP",
+                "Welcome to Cyclone-AOSP! We believe that you'll love it. " +
+                "Ready to roll the UDC!");
 
             // In case the runtime switched since last boot (such as when
             // the old runtime was removed in an OTA), set the system
