@@ -104,5 +104,9 @@ public class SystemSettings {
         Settings.System.NAVIGATION_BAR_IME_SPACE,
         Settings.System.ENABLE_FLOATING_ROTATION_BUTTON,
         Settings.System.LOCKSCREEN_ROTATION,
+        Settings.System.QS_TILE_LABEL_HIDE,
+        Settings.System.QS_TILE_VERTICAL_LAYOUT,
+        Settings.System.QS_LAYOUT,
+        Settings.System.QQS_LAYOUT
     };
 }
