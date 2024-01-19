@@ -400,7 +400,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         boolean valueChanged = mIsIncompatibleCharging != isIncompatibleCharging;
         mIsIncompatibleCharging = isIncompatibleCharging;
         if (valueChanged) {
-            mDrawable.setCharging(isCharging());
+            mAccessorizedDrawable.setCharging(isCharging());
             updateContentDescription();
         }
     }
@@ -869,13 +869,13 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
     public void dump(PrintWriter pw, String[] args) {
         String powerSave = mAccessorizedDrawable == null ?
                 null : mAccessorizedDrawable.getPowerSaveEnabled() + "";
-        String displayShield = mDrawable == null ? null : mDrawable.getDisplayShield() + "";
-        String charging = mDrawable == null ? null : mDrawable.getCharging() + "";
+        String displayShield = mAccessorizedDrawable == null ? null : mAccessorizedDrawable.getDisplayShield() + "";
+        String charging = mAccessorizedDrawable == null ? null : mAccessorizedDrawable.getCharging() + "";
         CharSequence percent = mBatteryPercentView == null ? null : mBatteryPercentView.getText();
         pw.println("  BatteryMeterView:");
         pw.println("    getPowerSave: " + powerSave);
-        pw.println("    mDrawable.getDisplayShield: " + displayShield);
-        pw.println("    mDrawable.getCharging: " + charging);
+        pw.println("    mAccessorizedDrawable.getDisplayShield: " + displayShield);
+        pw.println("    mAccessorizedDrawable.getCharging: " + charging);
         pw.println("    mBatteryPercentView.getText(): " + percent);
         pw.println("    mTextColor: #" + Integer.toHexString(mTextColor));
         pw.println("    mBatteryStateUnknown: " + mBatteryStateUnknown);

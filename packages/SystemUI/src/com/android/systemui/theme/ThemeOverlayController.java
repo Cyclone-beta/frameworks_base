@@ -144,7 +144,6 @@ public class ThemeOverlayController implements CoreStartable, Dumpable {
     private final ConfigurationController mConfigurationController;
     private final DeviceProvisionedController mDeviceProvisionedController;
     private final Resources mResources;
-    private final SystemSettings mSystemSettings;
     // Current wallpaper colors associated to a user.
     private final SparseArray<WallpaperColors> mCurrentColors = new SparseArray<>();
     private final WallpaperManager mWallpaperManager;
@@ -409,7 +408,6 @@ public class ThemeOverlayController implements CoreStartable, Dumpable {
             ThemeOverlayApplier themeOverlayApplier,
             SystemSettings systemSettings,
             SecureSettings secureSettings,
-            SystemSettings systemSettings,
             WallpaperManager wallpaperManager,
             UserManager userManager,
             DeviceProvisionedController deviceProvisionedController,
@@ -437,7 +435,6 @@ public class ThemeOverlayController implements CoreStartable, Dumpable {
         mWallpaperManager = wallpaperManager;
         mUserTracker = userTracker;
         mResources = resources;
-        mSystemSettings = systemSettings;
         mWakefulnessLifecycle = wakefulnessLifecycle;
         mUiModeManager = uiModeManager;
         dumpManager.registerDumpable(TAG, this);
